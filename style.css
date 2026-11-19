@@ -1,0 +1,143 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: #f3f3f3;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
+.main-header {
+  width: 100%;
+  height: 102px;
+  padding: 6px;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.main-header img { height: 50px; }
+.main-header h1 { margin: 0; font-size: 1.8rem; }
+
+/* FILTROS */
+.filters {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 32px;
+}
+.filter-group { display: flex; flex-direction: column; gap: 4px; }
+.filter-group label { font-size: 0.8rem; }
+.filter-group input,
+.filter-group select {
+  height: 49.6px;
+  width: 175px;
+  padding: 0 12px;
+  font-size: 0.8rem;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background: #fff;
+}
+.filter-group small { font-size: 0.65rem; color: #555; }
+
+/* MENSAJE DE ERROR DE VALIDACIÓN */
+.error-message {
+  margin: 0 32px 20px;
+  color: #c0392b;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.error-message:empty {
+  display: none;
+}
+
+/* GRID DE TARJETAS */
+.countries-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 0 32px;
+}
+
+.card {
+  background-color: #E0E0E0;
+  border: 1px solid #888;
+  padding: 28.8px;
+  cursor: pointer;
+}
+.card img {
+  display: block;
+  width: 200px;
+  height: 105px;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+.card h2 { margin: 0 0 4.32px; font-size: 1rem; }
+.card p  { margin: 4.32px 0; font-size: 0.75rem; }
+
+/* MENSAJE "SIN RESULTADOS" */
+.message {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 20px 0;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* BOTÓN SHOW MORE */
+.show-more {
+  display: block;
+  margin: 10px 32px 32px;
+  height: 38.4px;
+  padding: 0 24px;
+  background-color: #666;
+  color: #fff;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.show-more:hover { background-color: #333; }
+
+/* PÁGINA DE DETALLES */
+.detail-page {
+  padding: 32px;
+}
+
+.back-btn {
+  height: 38.4px;
+  padding: 0 32px;
+  background-color: #666;
+  color: #fff;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.back-btn:hover { background-color: #333; }
+
+.detail-content {
+  max-width: 500px;
+  margin: 24px auto 0;
+}
+
+.detail-title {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 0 0 16px;
+}
+
+.detail-flag {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin-bottom: 12px;
+}
+
+.detail-content p {
+  margin: 6px 0;
+  font-size: 0.8rem;
+}

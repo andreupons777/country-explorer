@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Country Explorer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <img src="assets/world.png" alt="World icon" />
+    <h1>Country Explorer</h1>
+  </header>
+
+  <section class="filters">
+    <div class="filter-group">
+      <label for="search-input">Search by Country Name:</label>
+      <input type="text" id="search-input" placeholder="Enter Country Name" />
+    </div>
+
+    <div class="filter-group">
+      <label for="region-select">Select a Region:</label>
+      <select id="region-select">
+        <option value="">All Regions</option>
+        <option value="Africa">Africa</option>
+        <option value="Americas">Americas</option>
+        <option value="Asia">Asia</option>
+        <option value="Europe">Europe</option>
+        <option value="Oceania">Oceania</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label for="population-input">Search by Population:</label>
+      <input type="number" id="population-input"
+             value="0" min="0" max="1500000000" step="10000" />
+      <small>Max - 1.5 Billion (1500000000)</small>
+    </div>
+  </section>
+
+  <!-- Mensaje de error de validación (las tarjetas no se tocan) -->
+  <p id="error-message" class="error-message"></p>
+
+  <main id="countries-container" class="countries-grid"></main>
+
+  <button id="show-more" class="show-more">Show More</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
